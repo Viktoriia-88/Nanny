@@ -1,21 +1,14 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { auth, db } from "../../firebase.js";
-import * as yup from 'yup';
-import s from './RegisterForm.module.css';
-import { ref, set } from "firebase/database";
-import toast from "react-hot-toast";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { auth } from "../../firebase.js";
+import toast from "react-hot-toast";
+import s from "./LoginForm.module.css";
+import * as yup from "yup";
 // import icons showPassword
 
-
 const schema = yup.object().shape({
-    name: yup
-        .string()
-        .min(2, 'Min 2 characters')
-        .max(32, 'Max 32 characters')
-        .required('Name is required'),
     email: yup
         .string()
         .email('Invalid email')
@@ -26,7 +19,7 @@ const schema = yup.object().shape({
         .required('Password is required'),
 });
 
-const RegisterForm = ({ onClose }) => {
+const LoginForm = ({ onClose }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const {
@@ -35,25 +28,13 @@ const RegisterForm = ({ onClose }) => {
         formState: { errors },
     } = useForm({ resolver: yupResolver(schema) });
 
-    const onSubmit = async ({ name, email, password }) => {
+    const onSubmit = async ({ email, password }) => {
         try {
-            const userCredential = await createUserWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
-
-            const user = userCredential.user;
-
-            await set(ref(db, 'users/' + user.uid), {
-                username: name,
-                email,
-            });
-
-            toast.success('Welcome!');
+            await signInWithEmailAndPassword(auth, email, password);
+            toast.success('Welcome back!');
             onClose();
         } catch (error) {
-            toast.error('Something went wrong');
+            toast.error('Invalid email or password');
         }
     };
 
@@ -63,16 +44,6 @@ const RegisterForm = ({ onClose }) => {
 
     return (
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
-            <div className={s.errorBox}>
-                <input
-                    type="text"
-                    {...register('name')}
-                    placeholder="Name"
-                    className={s.input}
-                />
-                {errors.name && <p className={s.error}>{errors.name.message}</p>}
-            </div>
-
             <div className={s.errorBox}>
                 <input
                     type="email"
@@ -106,10 +77,10 @@ const RegisterForm = ({ onClose }) => {
             </div>
 
             <button type="submit" className={s.btnSubmit}>
-                Sign Up
+                Log In
             </button>
         </form>
     );
 };
 
-export default RegisterForm;
+export default LoginForm;

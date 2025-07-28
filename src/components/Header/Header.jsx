@@ -6,6 +6,10 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { get, ref } from "firebase/database";
 import clsx from "clsx";
 import ModalWrapper from "../ModalWrapper/ModalWrapper.jsx";
+import Navigation from "../Navigation/Navigation.jsx";
+import LoginModal from "../LoginModal/LoginModal.jsx";
+import RegisterModal from "../RegisterModal/RegisterModal.jsx";
+// import icon UserIcon
 
 const Header = () => {
     const [user, setUser] = useState(null);
@@ -50,7 +54,7 @@ const Header = () => {
     };
 
     const renderModal = () => {
-        if (modal === 'register') {
+        if (modal === 'registration') {
             return (
                 <ModalWrapper
                     component={<RegisterModal onClose={() => setModal(null)} />}
@@ -83,7 +87,7 @@ const Header = () => {
                 {user ? (
                     <div className={s.isUser}>
                         <div className={s.user}>
-                            <img src={UserIcon} alt="User" className={s.userIcon} />
+                            {/* <img src={UserIcon} alt="User" className={s.userIcon} /> */}
                             <p className={s.userName}>{user.name}</p>
                         </div>
                         <button className={s.logOutBtn} onClick={logout}>

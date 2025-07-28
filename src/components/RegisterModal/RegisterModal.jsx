@@ -1,10 +1,12 @@
+import RegisterForm from '../RegisterForm/RegisterForm.jsx';
 import s from './RegisterModal.module.css'
+// import icons CloseIcon
 
 const RegisterModal = ({ onClose }) => {
     return (
         <div className={s.regModal}>
             <button className={s.closeBtn} onClick={onClose}>
-                <img className={s.closeIcon} src={CloseIcon} alt="Close button" />
+                {/* <img className={s.closeIcon} src={CloseIcon} alt="Close button" /> */}
             </button>
             <h2 className={s.title}>Registration</h2>
             <p className={s.text}>
