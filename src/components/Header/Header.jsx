@@ -5,6 +5,7 @@ import { auth, db } from "../../firebase.js";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { get, ref } from "firebase/database";
 import clsx from "clsx";
+import ModalWrapper from "../ModalWrapper/ModalWrapper.jsx";
 
 const Header = () => {
     const [user, setUser] = useState(null);
