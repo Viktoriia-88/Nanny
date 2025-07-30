@@ -9,6 +9,7 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
     apiKey: "AIzaSyAutT17hINeRnXuV41JsmTxyMMTCU8jDN0",
     authDomain: "nanny-finder-86a1e.firebaseapp.com",
+    databaseURL: "https://nanny-finder-86a1e-default-rtdb.firebaseio.com",
     projectId: "nanny-finder-86a1e",
     storageBucket: "nanny-finder-86a1e.firebasestorage.app",
     messagingSenderId: "128380149641",
