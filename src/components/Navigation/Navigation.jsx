@@ -2,21 +2,21 @@ import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import s from "./Navigation.module.css";
 
-const linkNav = ({ isActive }) => {
+const buildLinkClass = ({ isActive }) => {
     return clsx(s.navLink, isActive && s.navActive);
 };
 
 const Navigation = ({ user }) => {
     return (
         <nav className={s.nav}>
-            <NavLink to="/" className={linkNav}>
+            <NavLink to="/" className={buildLinkClass}>
                 Home
             </NavLink>
-            <NavLink to="/nannies" className={linkNav}>
+            <NavLink to="/nannies" className={buildLinkClass}>
                 Nannies
             </NavLink>
             {user && (
-                <NavLink to="/favorites" className={linkNav}>
+                <NavLink to="/favorites" className={buildLinkClass}>
                     Favorites
                 </NavLink>
             )}

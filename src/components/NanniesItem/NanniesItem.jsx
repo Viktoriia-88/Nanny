@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import s from './NanniesItem.module.css';
 import MoreInfo from "../MoreInfo/MoreInfo.jsx";
+import OnlineIcon from '../../assets/icons/online.svg';
+import LocationIcon from '../../assets/icons/location.svg';
+import StarIcon from '../../assets/icons/star.svg';
+import HeartActiveIcon from '../../assets/icons/heart-full.svg';
+import HeartIcon from '../../assets/icons/heart.svg';
+
 
 const NanniesItem = ({ nanny, user }) => {
     const {
@@ -65,7 +71,7 @@ const NanniesItem = ({ nanny, user }) => {
                     </div>
                     <ul className={s.filterInfo}>
                         <li className={s.filterItem}>
-                            <img src={LocationIcon} alt="Star" className={s.locationIcon} />
+                            <img src={LocationIcon} alt="Location" className={s.locationIcon} />
                             {location}
                         </li>
                         <li className={s.filterItem}>

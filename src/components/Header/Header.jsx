@@ -9,6 +9,7 @@ import ModalWrapper from "../ModalWrapper/ModalWrapper.jsx";
 import Navigation from "../Navigation/Navigation.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
 import RegisterModal from "../RegisterModal/RegisterModal.jsx";
+import UserIcon from "../../assets/icons/user.svg";
 // import icon UserIcon
 
 const Header = () => {
@@ -87,7 +88,7 @@ const Header = () => {
                 {user ? (
                     <div className={s.isUser}>
                         <div className={s.user}>
-                            {/* <img src={UserIcon} alt="User" className={s.userIcon} /> */}
+                            <img src={UserIcon} alt="User" className={s.userIcon} />
                             <p className={s.userName}>{user.name}</p>
                         </div>
                         <button className={s.logOutBtn} onClick={logout}>

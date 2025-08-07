@@ -1,0 +1,65 @@
+.header {
+    height: 48px;
+    padding: 20px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    border-bottom: 1px solid rgba(251, 251, 251, 0.4);
+    z-index: 999;
+}
+
+.logo {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    padding: 10px 0;
+    padding-right: 487px;
+}
+
+.notUser {
+    display: flex;
+    gap: 8px;
+}
+
+.logInBtn {
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 30px;
+    padding: 14px 39px;
+    width: 124px;
+    height: 48px;
+    background: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
+
+.logInBtn:hover,
+.logInBtn:focus {
+    background: #fbfbfb;
+    color: #103931;
+}
+
+.registerBtn {
+    border-radius: 30px;
+    padding: 14px 40px;
+    width: 168px;
+    height: 48px;
+    background: #103931;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
+
+.registerBtn:hover,
+.registerBtn:focus {
+    background: #fbfbfb;
+    color: #103931;
+}

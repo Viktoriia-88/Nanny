@@ -1,0 +1,114 @@
+.hero {
+    display: flex;
+    width: 1376px;
+    height: 736px;
+    border-radius: 30px;
+    background-color: #103931;
+    justify-content: space-between;
+    position: relative;
+    /* height: 100vh; */
+}
+
+.textBox {
+    position: relative;
+}
+
+.heroTitle {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fbfbfb;
+    padding-top: 251px;
+    padding-left: 96px;
+    width: 517px;
+}
+
+.heroText {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.07143;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    padding-top: 28px;
+    padding-left: 96px;
+}
+
+.link {
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 30px;
+    /* padding: 18px 50px; */
+    width: 230px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+    gap: 18px;
+    margin-top: 64px;
+    margin-left: 96px;
+}
+
+.linkText {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
+
+.heroImg {
+    border-radius: 0 30px 30px 0;
+    width: 699px;
+    height: 736px;
+}
+
+.infoBox {
+    position: absolute;
+    border-radius: 20px;
+    width: 284px;
+    height: 118px;
+    background-color: #fbfbfb;
+    margin-top: 568px;
+    margin-left: 1042px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 32px;
+}
+
+.iconBox {
+    background-color: #103931;
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+}
+
+.checkIcon {
+    width: 30px;
+    height: 30px;
+    padding: 12px;
+}
+
+.infoText {
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: rgba(17, 16, 28, 0.5);
+}
+
+.infoSpan {
+    font-weight: 700;
+    font-size: 24px;
+    color: #11101c;
+    display: flex;
+    align-items: center;
+}

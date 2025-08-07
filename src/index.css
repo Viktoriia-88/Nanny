@@ -1,4 +1,48 @@
-.container {
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  font-family: "Helvetica Neue", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* .container {
   max-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
@@ -19,7 +63,7 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-}
+} */
 
 
 /* :root {

@@ -1,4 +1,3 @@
-import React from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
@@ -10,16 +9,19 @@ import s from "./AppointmentForm.module.css";
 const schema = yup.object().shape({
     address: yup
         .string()
+        .min(2, 'Min 2 characters')
         .required('Address is required'),
     phone: yup
         .string()
-        .min(3, 'Too short!')
+        .min(13, 'Too short!')
         .max(13, 'Too long!')
         .matches(/^\+?[0-9]*$/, 'Only numbers and optional ' + ' are allowed')
         .required('Number is required!'),
     age: yup
         .number()
-        .max(2, 'Too long!')
+        .typeError("Enter age from 1 to 16")
+        .min(1, "Min child's age is 1 years old")
+        .max(16, "Max child's age is 16 years old")
         .required('Age is required!'),
     date: yup
         .date()

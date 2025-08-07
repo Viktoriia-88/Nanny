@@ -2,7 +2,7 @@ import { useState } from "react";
 import ModalWrapper from "../ModalWrapper/ModalWrapper.jsx";
 import AppointmentModal from "../AppointmentModal/AppointmentModal.jsx";
 import s from './MoreInfo.module.css';
-// import icon star
+import StarIcon from "../../assets/icons/star.svg";
 
 const MoreInfo = ({ nanny }) => {
     const {

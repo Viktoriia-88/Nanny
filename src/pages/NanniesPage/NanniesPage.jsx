@@ -51,7 +51,7 @@ const NanniesPage = () => {
     const fetchAllData = async () => {
         try {
             setError(null);
-            const snapshot = await get(ref(db, 'psychologist_1'));
+            const snapshot = await get(ref(db, 'nanny-finder'));
             const data = snapshot.val();
 
             if (data) {
@@ -110,7 +110,7 @@ const NanniesPage = () => {
                         options={sortOptions}
                         value={sortOptions.find((option) => option.value === sortOption)}
                         onChange={(selected) => setSortOption(selected.value)}
-                        styles={customSelectStyles}
+                        // styles={customSelectStyles}
                     />
                 </div>
 
